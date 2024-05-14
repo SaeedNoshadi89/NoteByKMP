@@ -1,7 +1,6 @@
 
 
-<video src="/composeApp/src/main/res/drawable/video.mp4"></video>
-
+[Preview](https://github.com/SaeedNoshadi89/NoteByKMP/blob/main/composeApp/src/main/res/drawable/video.mp4)
 
 # NoteByKMP - A Compose Multiplatform TaskManager App
 This project is a powerful and versatile TaskManager app built using Compose, Navigation, Jetpack ViewModel, and Room. It allows you to create a Task based on category and DateTime with Bookmark, and complete and edit a Task across desktops (macOS), Android, and iOS.
