@@ -51,3 +51,13 @@ Build and run the project for your target platform (Android, Desktop, or iOS) fo
 - Room: An SQLite wrapper for local data persistence with an intuitive API.
 - Kotlin: A concise and expressive language for developing Android and other cross-platform applications.
 - Koin: A DI library to handle Dependency Injection
+
+
+## License
+```
+Copyright (c) 2024 Saeed Noshadi
+
+This library is licensed under the MIT License. [LICENSE.txt](https://github.com/SaeedNoshadi89/NoteByKMP/blob/main/LICENSE)
+
+Developed By Saeed Noshadi
+```
