@@ -6,6 +6,7 @@ import java.awt.Dimension
 import org.sn.notebykmp.App
 
 fun main() = application {
+
     Window(
         title = "NoteByKMP",
         state = rememberWindowState(width = 800.dp, height = 600.dp),

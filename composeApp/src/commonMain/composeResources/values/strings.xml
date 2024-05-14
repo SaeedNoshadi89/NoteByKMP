@@ -1,7 +1,9 @@
 <resources>
-    <string name="cyclone">Cyclone</string>
-    <string name="open_github">Open github</string>
-    <string name="run">Run</string>
-    <string name="stop">Stop</string>
-    <string name="theme">Theme</string>
+    <string name="bookmark">Bookmarks</string>
+    <string name="notes">Notes</string>
+    <string name="add_notes_route">add_notes_route</string>
+    <string name="back_button">Back</string>
+    <string name="today">Today</string>
+    <string name="you_have_not_any_notes">You haven't any notes</string>
+
 </resources>
