@@ -1,23 +1,26 @@
+
+import com.android.build.api.dsl.ManagedVirtualDevice
 import org.jetbrains.compose.ExperimentalComposeLibrary
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
-import com.android.build.api.dsl.ManagedVirtualDevice
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.plugin.KotlinSourceSetTree
 
 plugins {
     alias(libs.plugins.multiplatform)
-    alias(libs.plugins.compose)
+    alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.android.application)
     alias(libs.plugins.buildConfig)
     alias(libs.plugins.kotlinx.serialization)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.room)
 }
 
 kotlin {
     androidTarget {
         compilations.all {
             kotlinOptions {
-                jvmTarget = "${JavaVersion.VERSION_1_8}"
-                freeCompilerArgs += "-Xjdk-release=${JavaVersion.VERSION_1_8}"
+                jvmTarget = "${JavaVersion.VERSION_11}"
+                freeCompilerArgs += "-Xjdk-release=${JavaVersion.VERSION_11}"
             }
         }
         //https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-test.html
@@ -32,11 +35,12 @@ kotlin {
     }
 
     jvm()
+    task("testClasses")
 
-    js {
-        browser()
-        binaries.executable()
-    }
+//    js {
+//        browser()
+//        binaries.executable()
+//    }
 
     listOf(
         iosX64(),
@@ -46,6 +50,7 @@ kotlin {
         it.binaries.framework {
             baseName = "ComposeApp"
             isStatic = true
+            linkerOpts.add("-lsqlite3")
         }
     }
 
@@ -62,10 +67,17 @@ kotlin {
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             implementation(libs.kotlinx.coroutines.core)
-            implementation(libs.ktor.core)
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.kotlinx.datetime)
-            implementation(libs.koin.core)
+            api(libs.koin.core)
+            implementation(libs.koin.compose)
+//            implementation(libs.koin.android)
+
+            implementation(libs.androidx.lifecycle.viewmodel.compose)
+            implementation(libs.androidx.navigation.compose)
+            implementation(libs.napier)
+            implementation(libs.androidx.room.runtime)
+            implementation(libs.sqlite.bundled)
         }
 
         commonTest.dependencies {
@@ -79,22 +91,20 @@ kotlin {
             implementation(compose.uiTooling)
             implementation(libs.androidx.activityCompose)
             implementation(libs.kotlinx.coroutines.android)
-            implementation(libs.ktor.client.okhttp)
+            implementation(libs.androidx.work.ktx)
+            implementation(libs.koin.work)
         }
 
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutines.swing)
-            implementation(libs.ktor.client.okhttp)
         }
 
-        jsMain.dependencies {
-            implementation(compose.html.core)
-            implementation(libs.ktor.client.js)
-        }
+//        jsMain.dependencies {
+//            implementation(compose.html.core)
+//        }
 
         iosMain.dependencies {
-            implementation(libs.ktor.client.darwin)
         }
 
     }
@@ -105,7 +115,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
 
         applicationId = "org.sn.notebykmp.androidApp"
@@ -130,8 +140,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     buildFeatures {
         compose = true
@@ -160,4 +170,15 @@ compose.experimental {
 buildConfig {
     // BuildConfig configuration here.
     // https://github.com/gmazzo/gradle-buildconfig-plugin#usage-in-kts
+}
+dependencies {
+    add("kspAndroid", libs.androidx.room.compiler)
+    add("kspIosSimulatorArm64", libs.androidx.room.compiler)
+    add("kspIosX64", libs.androidx.room.compiler)
+    add("kspIosArm64", libs.androidx.room.compiler)
+    add("kspJvm", libs.androidx.room.compiler)
+}
+
+room {
+    schemaDirectory("$projectDir/schemas")
 }
