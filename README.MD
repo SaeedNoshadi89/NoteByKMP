@@ -57,7 +57,7 @@ Build and run the project for your target platform (Android, Desktop, or iOS) fo
 ```
 Copyright (c) 2024 Saeed Noshadi
 
-This library is licensed under the MIT License. [LICENSE.txt](https://github.com/SaeedNoshadi89/NoteByKMP/blob/main/LICENSE)
+This library is licensed under the MIT License. See [LICENSE.txt](https://github.com/SaeedNoshadi89/NoteByKMP/blob/main/LICENSE)
 
 Developed By Saeed Noshadi
 ```
