@@ -1,5 +1,5 @@
 
-<td align="center"> <img src="/composeApp/src/main/res/drawable/gif.gif" width="780" height="780"/></td>
+<td align="center"> <img src="/composeApp/src/main/res/drawable/gif.gif"/></td>
 
 # NoteByKMP - A Compose Multiplatform TaskManager App
 This project is a powerful and versatile TaskManager app built using Compose, Navigation, Jetpack ViewModel, and Room. It allows you to create a Task based on category and DateTime with Bookmark, and complete and edit a Task across desktops (macOS), Android, and iOS.
