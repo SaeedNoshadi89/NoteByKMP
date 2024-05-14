@@ -1,31 +1,10 @@
 <div align="center">
 </br>
-<img src="https://github.com/binayshaw7777/Knowtify/assets/62587060/1cea48ea-8669-4c98-8b3c-88755bac4fde" width="200" height="200" />
+<img src="https://github.com/SaeedNoshadi89/NoteByKMP/tree/dev/composeApp/src/main/res/drawable/gif.gif" width="200" height="200" />
 </div>
 
 # NoteByKMP - A Compose Multiplatform TaskManager App
 This project is a powerful and versatile TaskManager app built using Compose, Navigation, Jetpack ViewModel, and Room. It allows you to create a Task based on category and DateTime with Bookmark, complete and edit a Task across desktops (macOS), Android, and iOS.
-
-
-<p align="center">
-  <img alt="API" src="https://img.shields.io/badge/Api%2021+-50f270?logo=android&logoColor=black&style=for-the-badge"/></a>
-
-  <a href="https://kotlinlang.org">
-      <img src="https://img.shields.io/badge/Kotlin-1.9.23-blue.svg?style=for-the-badge&logo=kotlin"/>
-  </a>
-
-  <a href="https://github.com/binayshaw7777/Knowtify/stargazers">
-      <img src="https://img.shields.io/github/stars/binayshaw7777/Knowtify?color=ffff00&style=for-the-badge"/>
-  </a>
-
-  <a href="https://hits.sh/github.com/binayshaw7777/Knowtify/">
-      <img alt="Hits" src="https://hits.sh/github.com/binayshaw7777/Knowtify.svg?style=for-the-badge&label=Views&extraCount=0&color=ff3f6f"/></a>
-  </a>
-
-  <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/binayshaw7777/Knowtify?style=for-the-badge">
-
-  </br>
-</p>
 
 ## Key Features:
 - Multiplatform Support: Enjoy a consistent dictionary experience on various devices, including desktops, Android, and iOS.
@@ -45,9 +24,6 @@ This project is a powerful and versatile TaskManager app built using Compose, Na
 - [💎 KotlinX Serialization](https://kotlinlang.org/docs/serialization.html)
 - [🏃‍♂️ Coroutines](https://discuss.kotlinlang.org/t/coroutines-with-multiplatform-projects/18006)
 - [📝 Napier](https://github.com/AAkira/Napier)
-
-## Architecture:
-![image](https://github.com/binayshaw7777/Knowtify/assets/62587060/942d977c-151f-49a1-be46-ffade986dfd1)
 
 ## Getting Started:
 
@@ -76,10 +52,3 @@ Build and run the project for your target platform (Android, Desktop, or iOS) fo
 - Room: An SQLite wrapper for local data persistence with an intuitive API.
 - Kotlin: A concise and expressive language for developing Android and other cross-platform applications.
 - Koin: A DI library to handle Dependency Injection
-
-
-Screenshot:
-![Banner](https://github.com/binayshaw7777/Knowtify/assets/62587060/b48dddc1-236c-441a-9593-37225aee9331)
-
-Recording:
-https://github.com/binayshaw7777/Knowtify/assets/62587060/f8d3ca1d-efdc-4345-90c5-2be1370c920a
