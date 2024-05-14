@@ -1,5 +1,6 @@
 
-[![Watch the video]()](/composeApp/src/main/res/drawable/video.mp4)
+
+<video src="/composeApp/src/main/res/drawable/video.mp4"></video>
 
 
 # NoteByKMP - A Compose Multiplatform TaskManager App
