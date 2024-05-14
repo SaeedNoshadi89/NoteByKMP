@@ -1,17 +1,15 @@
-<div align="center">
-</br>
-<img src="https://github.com/SaeedNoshadi89/NoteByKMP/tree/dev/composeApp/src/main/res/drawable/gif.gif" width="200" height="200" />
-</div>
+
+<td align="center"> <img src="https://github.com/SaeedNoshadi89/NoteByKMP/tree/dev/composeApp/src/main/res/drawable/gif.gif"  /></td>
 
 # NoteByKMP - A Compose Multiplatform TaskManager App
-This project is a powerful and versatile TaskManager app built using Compose, Navigation, Jetpack ViewModel, and Room. It allows you to create a Task based on category and DateTime with Bookmark, complete and edit a Task across desktops (macOS), Android, and iOS.
+This project is a powerful and versatile TaskManager app built using Compose, Navigation, Jetpack ViewModel, and Room. It allows you to create a Task based on category and DateTime with Bookmark, and complete and edit a Task across desktops (macOS), Android, and iOS.
 
 ## Key Features:
 - Multiplatform Support: Enjoy a consistent dictionary experience on various devices, including desktops, Android, and iOS.
 - Room Database for Offline Storage: Save and Bookmark Tasks.
 - Kotlin date-Time to create a beautiful custom calendar without using any library
 - Compose Navigation to handle screens
-- Use jetpack library to implement the ViewModel
+- Use the jetpack library to implement the ViewModel
 - Beautiful Compose UI: Create an intuitive and visually appealing user interface with Compose.
 
 ## Libraries Used:
@@ -29,7 +27,7 @@ This project is a powerful and versatile TaskManager app built using Compose, Na
 
 Prerequisites:
 - Android Studio with Compose plugins installed or Fleet IDE.
-- Basic knowledge of Kotlin, Compose, AndroidX libs like and Room, Navigation and etc.
+- Basic knowledge of Kotlin, Compose, AndroidX libs like and Room, Navigation etc.
 
 
 ## Clone the Project:
