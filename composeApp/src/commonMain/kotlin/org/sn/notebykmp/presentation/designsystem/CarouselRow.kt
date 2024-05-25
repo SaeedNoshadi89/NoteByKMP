@@ -45,7 +45,7 @@ fun <T> CarouselRow(
     pageSpacing: Dp = 22.dp,
     isAutoScrolling: Boolean = true,
     autoScrollDuration: Long = 3_000L,
-    content: @Composable (item: T, modifier: Modifier) -> Unit,
+    content: @Composable (T, Modifier) -> Unit,
 ) {
     val pageCount = list.size
     val scope = rememberCoroutineScope()
@@ -96,8 +96,8 @@ fun <T> CarouselRow(
                         )
                 ) {
                     content(
-                        item = item,
-                        modifier = Modifier
+                        item,
+                        Modifier
                     )
                 }
             }
